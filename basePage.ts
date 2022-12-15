@@ -1,5 +1,7 @@
 import {Builder, By, Capabilities, until, WebDriver, WebElement} from "selenium-webdriver";
+import { Driver } from "selenium-webdriver/chrome";
 const chromedriver = require("chromedriver")
+
 
 interface Options {
     driver?: WebDriver;
@@ -50,4 +52,5 @@ export class BasePage {
         await this.driver.wait(until.elementLocated(elementBy));
         return this.driver.findElement(elementBy).sendKeys(keys)
     }
+
 }

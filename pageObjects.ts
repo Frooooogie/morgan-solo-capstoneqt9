@@ -13,15 +13,16 @@ creatAnAcctBtn: By = By.xpath('/html/body/div[2]/main/div[3]/div/form/div/div[1]
 addAddress: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/div[4]/div[1]/a')
 phoneNumber: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[1]/div[4]/div/input')
 streetAddress: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[1]/div/input')
-city: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[1]/div/div[2]/div[2]/div/input') 
+city: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[2]/div/input') 
 stateMenu: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[3]/div/select')
 northCarolina: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[3]/div/select/option[45]')
 zip: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/fieldset[2]/div[4]/div/input')
 saveAddress: By = By.xpath('/html/body/div[2]/main/div[2]/div[1]/form/div/div[1]/button')
-signInBtn: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/a')
+signInLink: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/a')
+signInBtn: By = By.xpath('/html/body/div[2]/main/div[3]/div/div[2]/div[1]/div[2]/form/fieldset/div[4]/div[1]/button')
 signInEmail: By = By.xpath('/html/body/div[2]/main/div[3]/div/div[2]/div[1]/div[2]/form/fieldset/div[2]/div/input')
 signInPassword: By = By.xpath('/html/body/div[2]/main/div[3]/div/div[2]/div[1]/div[2]/form/fieldset/div[3]/div/input')
-dropDownMenu: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/div')
+dropDownMenu: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button')
 signOutBtn: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/div/ul/li[3]/a')
 womenCat: By = By.xpath('/html/body/div[2]/div[1]/div/div[2]/nav/ul/li[2]/a')
 womenJackets: By = By.xpath('/html/body/div[2]/main/div[4]/div[2]/div[2]/div/ul[1]/li[2]/a')
@@ -42,15 +43,17 @@ menPantsFirstItemColor: By = By.xpath('/html/body/div[2]/main/div[2]/div/div[1]/
 addToCart: By = By.xpath('/html/body/div[2]/main/div[2]/div/div[1]/div[4]/form/div[2]/div/div/div[2]/button')
 cartIcon: By = By.xpath('/html/body/div[2]/header/div[2]/div[1]/a')
 proceedToCart: By = By.xpath('/html/body/div[2]/header/div[2]/div[1]/div/div/div/div[2]/div[3]/div/button')
-bestWayShipping: By = By.xpath('/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]/td[1]/input')
+bestWayShipping: By = By.xpath('/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[2]/div/div[3]/form/div[1]/table/tbody/tr[1]')
 nextBtn: By = By.xpath('/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[2]/div/div[3]/form/div[3]/div/button')
-placeOrder: By = By.xpath('/html/body/div[3]/main/div[2]/div/div[2]/div[4]/ol/li[3]/div/form/fieldset/div[1]/div/div/div[2]/div[2]/div[4]/div/button')
+placeOrder: By = By.xpath('/html/body/div[3]/main/div[2]/div/div[2]/div[4]/ol/li[3]/div/form/fieldset/div[1]/div/div/div[2]/div[2]/div[4]/div/button/span')
+dropDownAcctBtn: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button')
+dropDwnMenuAfterSvingAddress: By = By.xpath('/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button')
 
-    constructor() {
+constructor() {
         super ({url:"https://magento.softwaretestingboard.com/"});
     };
-   //get results from cart//
     async getResults() {
-        return await this.getText(this.proceedToCart);
-    };
+        return await this.getText(this.nextBtn)
+    }
+ 
 }
