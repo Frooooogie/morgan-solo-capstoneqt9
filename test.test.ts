@@ -16,7 +16,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.click(MorganTest.createAnAcctLink);
         await MorganTest.setInput(MorganTest.firstName, "Morgan");
         await MorganTest.setInput(MorganTest.lastName, "Test");
-        await MorganTest.setInput(MorganTest.email, "morganstest@test.ts");
+        await MorganTest.setInput(MorganTest.email, "morganautotest@test.com");
         await MorganTest.setInput(MorganTest.password, "123xyz#$%");
         await MorganTest.setInput(MorganTest.confirmPassword, "123xyz#$%");
         await MorganTest.click(MorganTest.creatAnAcctBtn);
@@ -39,7 +39,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Signing In and Out of user account", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(100);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganstest@test.ts");
+        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
         await MorganTest.driver.sleep(300);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(300);
@@ -47,6 +47,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.driver.sleep(100);
         await MorganTest.click(MorganTest.dropDownMenu);
         await MorganTest.click(MorganTest.signOutBtn);
+        await MorganTest.driver.sleep(2000);
     
     })
     
@@ -54,7 +55,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Adding and removing items from Wishlist", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganstest@test.ts");
+        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000);
@@ -80,7 +81,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Adding and removing items from kpare list", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganstest@test.ts");
+        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000);
@@ -105,7 +106,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Adding Items to cart and checking out", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganstest@test.ts");
+        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000)
@@ -126,6 +127,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.click(MorganTest.addToCart);
         await MorganTest.driver.sleep(300);
         await MorganTest.click(MorganTest.cartIcon);
+        await MorganTest.driver.sleep(100);
         await MorganTest.click(MorganTest.proceedToCart);
         await MorganTest.driver.sleep(300);
         await MorganTest.click(MorganTest.bestWayShipping);
