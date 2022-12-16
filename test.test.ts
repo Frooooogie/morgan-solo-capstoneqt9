@@ -16,7 +16,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.click(MorganTest.createAnAcctLink);
         await MorganTest.setInput(MorganTest.firstName, "Morgan");
         await MorganTest.setInput(MorganTest.lastName, "Test");
-        await MorganTest.setInput(MorganTest.email, "morganautotest@test.com");
+        await MorganTest.setInput(MorganTest.email, "mmmmmmmm@gmillll.com");
         await MorganTest.setInput(MorganTest.password, "123xyz#$%");
         await MorganTest.setInput(MorganTest.confirmPassword, "123xyz#$%");
         await MorganTest.click(MorganTest.creatAnAcctBtn);
@@ -39,7 +39,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Signing In and Out of user account", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(100);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
+        await MorganTest.setInput(MorganTest.signInEmail, "mmmmmmmm@gmillll.com");
         await MorganTest.driver.sleep(300);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(300);
@@ -55,7 +55,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Adding and removing items from Wishlist", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
+        await MorganTest.setInput(MorganTest.signInEmail, "mmmmmmmm@gmillll.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000);
@@ -69,19 +69,19 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.click(MorganTest.firstPants);
         await MorganTest.click(MorganTest.addToWishlist);
         await MorganTest.driver.sleep(1000);
-    // cannot figure out how to hover over first item in wishlist
-      //  await MorganTest.click(MorganTest.trashcan);
-    // hover over first item in wishlist again
-       // await MorganTest.click(MorganTest.trashcan);
+        await MorganTest.click(MorganTest.removeFromWishlist);
+        await MorganTest.driver.sleep(1000);
+        await MorganTest.click(MorganTest.removeFromWishlistTwo);
+        await MorganTest.driver.sleep(1000);
         await MorganTest.click(MorganTest.dropDownMenu);
         await MorganTest.click(MorganTest.signOutBtn);    
         await MorganTest.driver.sleep(1000);    
     })
     
-    test("Adding and removing items from kpare list", async ()=>{
+    test("Adding and removing items from Compare list", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
+        await MorganTest.setInput(MorganTest.signInEmail, "mmmmmmmm@gmillll.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000);
@@ -94,10 +94,14 @@ describe("Morgan's Solo Capstone for Luma", () => {
         await MorganTest.click(MorganTest.menPants);
         await MorganTest.click(MorganTest.secondMenPantsItem);
         await MorganTest.click(MorganTest.addToCompare);
-    // cannot figure out how to hover over first item in compare list
-       // await MorganTest.click(MorganTest.trashcan);
-    // hover over first item in compare list again
-       // await MorganTest.click(MorganTest.trashcan);
+        await MorganTest.click(MorganTest.compareList);
+        await MorganTest.driver.sleep(1000);
+        await MorganTest.click(MorganTest.compareRemoveOne);
+        await MorganTest.click(MorganTest.proceedToRemoveCompare);
+        await MorganTest.driver.sleep(1000);
+        await MorganTest.click(MorganTest.compareRemoveTwo);
+        await MorganTest.click(MorganTest.proceedToRemoveCompare);
+        await MorganTest.driver.sleep(1000);
         await MorganTest.click(MorganTest.dropDownMenu);
         await MorganTest.click(MorganTest.signOutBtn);  
         await MorganTest.driver.sleep(1000);
@@ -106,7 +110,7 @@ describe("Morgan's Solo Capstone for Luma", () => {
     test("Adding Items to cart and checking out", async ()=>{
         await MorganTest.click(MorganTest.signInLink);
         await MorganTest.driver.sleep(2000);
-        await MorganTest.setInput(MorganTest.signInEmail, "morganautotest@test.com");
+        await MorganTest.setInput(MorganTest.signInEmail, "mmmmmmmm@gmillll.com");
         await MorganTest.driver.sleep(1000);
         await MorganTest.setInput(MorganTest.signInPassword, "123xyz#$%");
         await MorganTest.driver.sleep(1000)
